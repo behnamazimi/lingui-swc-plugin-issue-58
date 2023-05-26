@@ -1,0 +1,39 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "private": true,
+  "sideEffects": [
+    "./src/utils/polyfills.js"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.styled.{js,ts}": [
+      "npm run lint:css"
+    ]
+  },
+  "dependencies": {
+    "@lingui/core": "4.0.0",
+    "@lingui/macro": "4.0.0",
+    "@lingui/react": "4.0.0",
+    "next": "13.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@lingui/cli": "3.17.2",
+    "@lingui/swc-plugin": "4.0.0",
+    "@types/react": "18.2.6",
+    "@types/react-dom": "18.2.4"
+  },
+  "engines": {
+    "node": ">=18.15",
+    "npm": "^9.5.0"
+  }
+}
